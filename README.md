@@ -1,11 +1,24 @@
 # GTA-3D Dataset
 A dataset of 2D imagery, 3D point cloud data, and 3D vehicle bounding box labels all generated using the Grand Theft Auto 5 game engine. The dataset contains image and depth map data captured at 1680x1050 resolution and oriented 3D bounding box labels of all vehicles. It is 55GB in total.
 
-## Image format
+![alt text](https://raw.githubusercontent.com/oscarmcnulty/gta-3d-dataset/master/3fd50f7b-658b-4ef4-bb17-dfc1f287def8_00000134.jpg)
 
-## Point cloud format
+![alt text](https://raw.githubusercontent.com/oscarmcnulty/gta-3d-dataset/master/3fd50f7b-658b-4ef4-bb17-dfc1f287def8_00000134_preds.png)
 
-## Label format
+## Using the dataset
+Helper classes to consume the data with are provided in `gta.py`. To read a single example use
+```
+from gta import GTAData
+
+filename = 'data/gta_test/3fd50f7b-658b-4ef4-bb17-dfc1f287def8_00000819'
+data = GTAData(filename)
+
+img = data.load_rgb() # 1680 x 1050 x 3 ndarray of pixel color intensities
+print(len(data.vehicles)) # Number of vehicles in the scene
+print(data.vehicles[0].get_bbox_oriented_birdseye()) # Coordinates of the oriented birdseye bounding box of a vehicle in the scene
+print(data.vehicles[0].get_bbox_2d()) # Coordinates of a bounding box in the image plane for a vehicle in the scene
+```
+An example 3D point cloud visualisation with bounding boxes is shown in `test_vis.py`
 
 ## Getting the dataset
   
