@@ -1,6 +1,8 @@
 # GTA-3D Dataset
 A dataset of 2D imagery, 3D point cloud data, and 3D vehicle bounding box labels all generated using the Grand Theft Auto 5 game engine. The dataset contains image and depth map data captured at 1680x1050 resolution and oriented 3D bounding box labels of all vehicles. It is 55GB in total.
 
+Created as part of my undergraduate thesis: [3D Object Localisation with Convolutional Neural Networks](3D-object-localisation-with-cnns.pdf)
+
 ![alt text](https://raw.githubusercontent.com/oscarmcnulty/gta-3d-dataset/master/3fd50f7b-658b-4ef4-bb17-dfc1f287def8_00000134.jpg)
 
 ![alt text](https://raw.githubusercontent.com/oscarmcnulty/gta-3d-dataset/master/3fd50f7b-658b-4ef4-bb17-dfc1f287def8_00000134_preds.png)
